@@ -41,6 +41,12 @@ html(lang="en")
       .on('message.created', function (message) {
           console.log(message);
        })
+      .on('posts.created', function (post) {
+          console.log(post);
+       })
+      .on('posts.comments.created', function (comment) {
+          console.log(comment);
+       })
       .on('connect', function() {
         console.log("соединение messageSocket установлено");
       })
